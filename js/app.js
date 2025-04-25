@@ -4749,12 +4749,9 @@
             let menuAbout = [ "Описание", "Как мы работаем", "Отзывы", "Сертификаты" ];
             new swiper_core_Swiper("#about", {
                 modules: [ EffectFade, Pagination ],
-                observer: true,
-                observeParents: true,
                 slidesPerView: 1,
                 spaceBetween: 0,
                 speed: 800,
-                loop: true,
                 lazy: true,
                 pagination: {
                     el: "#about-btns",
@@ -4778,12 +4775,12 @@
             });
         }
         if (document.querySelector("#review-slider")) new swiper_core_Swiper("#review-slider", {
-            slideClass: "review-slide",
+            slideClass: "review__slide",
             modules: [ Navigation ],
             observer: true,
             observeParents: true,
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 10,
             speed: 800,
             loop: true,
             lazy: true,
@@ -4798,7 +4795,7 @@
             slideClass: "certificates__slide",
             observer: true,
             observeParents: true,
-            slidesPerView: 5,
+            slidesPerView: 1,
             spaceBetween: 0,
             speed: 800,
             loop: true,

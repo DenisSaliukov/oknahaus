@@ -1207,6 +1207,10 @@ body::after {
 .page__about .products__slider-body {
   padding: 0
 }
+.products__slider {
+  position: relative;
+  z-index: 0
+}
 .products__slide {
   background-color: #fff
 }
@@ -2054,14 +2058,6 @@ body::after {
 .request-popup__banner {
   max-width: 37.1875rem
 }
-.super {
-  position: absolute;
-  width: 100px;
-  height: 30px;
-  top: 0;
-  right: 0;
-  background-color: green
-}
 .swiper {
   overflow: hidden
 }
@@ -2095,7 +2091,7 @@ body::after {
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0)
 }
-.swiper-android .review-slide,
+.swiper-android .review__slide,
 .swiper-android .swiper-wrapper {
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0)
@@ -3156,9 +3152,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-right: 1.875rem
   }
   .top-popup__content {
-    padding-left: 1.875rem
-  }
-  .top-popup__content {
     padding-bottom: 1.875rem
   }
   .popup-cards {
@@ -3562,9 +3555,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .top-popup__content {
     padding-right: 1.25rem
-  }
-  .top-popup__content {
-    padding-left: 1.25rem
   }
   .top-popup__content {
     padding-bottom: 1.25rem
@@ -4191,9 +4181,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .top-popup__content {
     padding-right: clamp(1.25rem ,1.0302197802rem + 1.0989010989vw ,1.875rem)
-  }
-  .top-popup__content {
-    padding-left: clamp(1.25rem ,1.0302197802rem + 1.0989010989vw ,1.875rem)
   }
   .top-popup__content {
     padding-bottom: clamp(1.25rem ,1.0302197802rem + 1.0989010989vw ,1.875rem)

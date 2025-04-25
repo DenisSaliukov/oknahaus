@@ -1,179 +1,2593 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+	<title>HomePage</title>
 	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250425212114">
+	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Верстка «OknaHaus»</title>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=60e8046c-95da-4497-bf2e-3969e67dc7ef&_v=20250411184906" type="text/javascript"></script>
+
+
 </head>
 
 <body>
-	<div class="rootpage">
-		<h1>Верстка «OknaHaus»</h1>
-		<div class="rootpage__info">
-			Описание проекта
-		</div>
-		<h2>Готовые страницы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Главная</a></li>
-		</ol>
-		<h2>Попапы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html#"></a></li>
-		</ol>
-		<div class="rootpage__tnx">
-			<h2>Спасибо за заказ!</h2>
-			<p>Буду рад (да) хорошему отзыву.</p>
-			<p>Обращайтесь еще!</p>
-		</div>
-		<div class="rootpage__contacts">
-			<h2>Мои контакты:</h2>
-			<p>Почта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-			<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-			<p>Соц. сети: <a href="">ссылка</a></p>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo"><img src="img/logo.webp" alt="logo"></div>
+				<nav class="header__menu menu">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__item-link" href="">Услуги</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="">Продукция</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="">О компании</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="">Портфолио</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="">Вопрос-ответ</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__buttons">
+					<button data-popup="#measurement" type="button" class="header__btn button-img button-img_org">
+						<span class="header__btn-img">
+							<svg class="header__btn-icon">
+								<use xlink:href="img/icons/icons.svg#head-btn-1"></use>
+							</svg>
+						</span>
+						<span class="header__btn-text">Заявка на
+							замер
+						</span>
+					</button>
+					<button data-popup="#calculation" type="button" class="header__btn button-img button-img_vlt">
+						<span class="header__btn-img">
+							<svg class="header__btn-icon">
+								<use xlink:href="img/icons/icons.svg#head-btn-2"></use>
+							</svg>
+						</span>
+						<span class="header__btn-text">Заказать
+							расчет
+						</span>
+					</button>
+				</div>
+				<div class="header__menu-btn"><button type="button" class="menu__icon icon-menu"><span></span></button></div>
+
+			</div>
+		</header>
+		<main class="page">
+			<button type="button" class="page__scroll-btn">
+				<svg class="page__scroll-btn-icon">
+					<use xlink:href="img/icons/icons.svg#to-top-arrow"></use>
+				</svg>
+			</button>
+			<section class="page__top top-page">
+				<div class="top-page__container">
+					<div class="top-page__inner">
+						<div class="top-page__content content-page">
+							<h1 class="content-page__title"><span>Окна Хаус -</span> <br>
+								Профессиональный подход <br>
+								к остеклению
+							</h1>
+							<ul class="content-page__advantages">
+								<li class="content-page__item">
+									<div class="content-page__image">
+										<svg class="content-page__icon">
+											<use xlink:href="img/icons/icons.svg#top-1"></use>
+										</svg>
+									</div>
+									<div class="content-page__text">Современные окна
+										и балконные конструкции
+										по доступным ценам</div>
+								</li>
+								<li class="content-page__item">
+									<div class="content-page__image">
+										<svg class="content-page__icon">
+											<use xlink:href="img/icons/icons.svg#top-2"></use>
+										</svg>
+									</div>
+									<div class="content-page__text">Квалифицированный
+										подход к решению задач
+										любой сложности</div>
+								</li>
+								<li class="content-page__item">
+									<div class="content-page__image">
+										<svg class="content-page__icon">
+											<use xlink:href="img/icons/icons.svg#top-3"></use>
+										</svg>
+									</div>
+									<div class="content-page__text">Гарантия
+										высочайшего качества
+										нашей продукции</div>
+								</li>
+							</ul>
+						</div>
+						<div class="top-page__banner banner-top">
+							<div class="banner-top__body">
+								<h3 class="banner-top__title title title_small">Вызвать замерщика на дом</h3>
+								<form action="#" class="banner-top__form banner-form">
+									<input autocomplete="off" type="text" name="form-name" data-error="Ошибка" placeholder="Представьтесь, пожалуйста" class="banner-form__input">
+									<input autocomplete="off" type="text" name="form-tel" data-error="Ошибка" placeholder="Номер телефона" class="banner-form__input">
+									<input autocomplete="off" type="email" name="form-email" data-error="Ошибка" placeholder="E-mail" class="banner-form__input">
+									<div class="banner-form__check">
+										<label>
+											<input type="checkbox" name="form-checkbox" data-error="Ошибка" class="banner-form__check-true">
+											<div class="banner-form__check-fake">
+												<svg class="banner-form__icon">
+													<use xlink:href="img/icons/icons.svg#choose"></use>
+												</svg>
+											</div>
+											<p>
+												Согласен на
+												обработку персональных данных
+												в соответствии с <a href="#">политикой конфиденциальности</a>
+											</p>
+										</label>
+									</div>
+									<button class="banner-form__button button">Отправить заявку</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__services services scrolling">
+				<div class="services__container">
+					<h2 class="services__title title">Наши услуги</h2>
+					<ul class="services__list">
+						<li data-popup="#installation" class="services__item">
+							<div class="services__top">
+								<div class="services__image">
+									<svg class="services__icon">
+										<use xlink:href="img/icons/icons.svg#services-1"></use>
+									</svg>
+								</div>
+								<div class="services__subtitle title">Установка <br>
+									пластиковых
+									окон</div>
+							</div>
+							<div class="services__text">Устанавливаем пластиковые окна<br> Rehau
+								от проверенного производителя<br>
+								с
+								гарантией качества</div>
+							<div class="services__bottom">
+								<button data-popup="#installation" type="button" class="services__button">
+									<svg class="services__bottom-icon">
+										<use xlink:href="img/icons/icons.svg#arrow-service"></use>
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li data-popup="#glazing" class="services__item">
+							<div class="services__top">
+								<div class="services__image">
+									<svg class="services__icon">
+										<use xlink:href="img/icons/icons.svg#services-2"></use>
+									</svg>
+								</div>
+								<div class="services__subtitle title">Остекление балконов <br>
+									и лоджий
+								</div>
+							</div>
+							<div class="services__text">Занимаемся остеклением и отделкой<br>
+								балконов и лоджий. Теплое и холодное<br> остекление, изготовление выносов и<br> крыш.
+								Беремся за
+								сложные объекты</div>
+							<div class="services__bottom">
+								<button data-popup="#glazing" type="button" class="services__button">
+									<svg class="services__bottom-icon">
+										<use xlink:href="img/icons/icons.svg#arrow-service"></use>
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li data-popup="#cottages" class="services__item">
+							<div class="services__top">
+								<div class="services__image">
+									<svg class="services__icon">
+										<use xlink:href="img/icons/icons.svg#services-3"></use>
+									</svg>
+								</div>
+								<div class="services__subtitle title">Остекление <br>
+									коттеджей и дач</div>
+							</div>
+							<div class="services__text">Остекление и отделка под ключ: <br>
+								от коттеджей и дач до террас<br>
+								и беседок. Выделяем личного<br>
+								технолога под каждый объект</div>
+							<div class="services__bottom">
+								<button data-popup="#cottages" type="button" class="services__button">
+									<svg class="services__bottom-icon">
+										<use xlink:href="img/icons/icons.svg#arrow-service"></use>
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li data-popup="#objects" class="services__item">
+							<div class="services__top">
+								<div class="services__image">
+									<svg class="services__icon">
+										<use xlink:href="img/icons/icons.svg#services-4"></use>
+									</svg>
+								</div>
+								<div class="services__subtitle title">Остекление <br>
+									корпоративных объектов
+								</div>
+							</div>
+							<div class="services__text">Реализуем сложные проекты <br>
+								по остеклению торговых центров,<br>
+								ресторанов, производственных помещений<br>
+								и офисов</div>
+							<div class="services__bottom">
+								<button data-popup="#objects" type="button" class="services__button"><svg class="services__bottom-icon">
+										<use xlink:href="img/icons/icons.svg#arrow-service"></use>
+									</svg></button>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="page__products products scrolling">
+				<div class="products__container">
+					<div class="products__content">
+						<h2 class="products__title title">Продукция</h2>
+					</div>
+					<div id="products-btns" class="products__slider-btns action-buttons"></div>
+					<div class="products__slider-body">
+						<div id="products" class="products__slider swiper">
+							<div class="products__wrapper swiper-wrapper">
+								<div class="products__slide swiper-slide products-slide">
+									<div class="products-slide__img-wrap">
+										<div class="products-slide__img">
+											<img src="img/products/slide-1.webp" alt="картинка">
+										</div>
+									</div>
+									<div class="products-slide__inner">
+										<div class="products-slide__content">
+											<h2 class="products-slide__title">Rehau Blitz New</h2>
+											<div class="products-slide__text">Сохраняют тепло в доме, защищают от шума
+												<br>
+												и вписываются в любой интерьер. <br>
+												Практичный выбор
+											</div>
+											<ul class="products-slide__list slider-list">
+												<li class="slider-list__item">
+													<div class="slider-list__name">Системная глубина</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">60/60 мм</div>
+												</li>
+												<li class="slider-list__item">
+													<div class="slider-list__name">Ширина стеклопакета</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">24/31 мм</div>
+												</li>
+												<li class="slider-list__item">
+													<div class="slider-list__name">Воздушные камеры</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">3</div>
+												</li>
+												<li class="slider-list__item">
+													<div class="slider-list__name">Теплосопротивление</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">0,70 м2С/ВТ</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="products__slide swiper-slide products-slide">
+									<div class="products-slide__img-wrap">
+										<div class="products-slide__img">
+											<img src="img/products/slide-2.webp" alt="картинка">
+										</div>
+									</div>
+									<div class="products-slide__inner">
+										<div class="products-slide__content">
+											<h2 class="products-slide__title">Veka Vekaslide</h2>
+											<div class="products-slide__text">Профиль VEKA VEKASLIDE портал -
+												высококачественный вариант, идеально подходящий для использования в
+												частном малоэтажном
+												строительстве.
+											</div>
+											<ul class="products-slide__list slider-list">
+												<li class="slider-list__item">
+													<div class="slider-list__name">Системная глубина</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">60/60 мм</div>
+												</li>
+												<li class="slider-list__item">
+													<div class="slider-list__name">Ширина стеклопакета</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">170 мм</div>
+												</li>
+												<li class="slider-list__item">
+													<div class="slider-list__name">Воздушные камеры</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">5/7</div>
+												</li>
+												<li class="slider-list__item">
+													<div class="slider-list__name">Теплосопротивление</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">0,70 м2С/ВТ</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="products__slide swiper-slide products-slide">
+									<div class="products-slide__img-wrap">
+										<div class="products-slide__img">
+											<img src="img/products/slide-3.webp" alt="картинка">
+										</div>
+									</div>
+									<div class="products-slide__inner">
+										<div class="products-slide__content">
+											<h2 class="products-slide__title">Veka Sunline</h2>
+											<div class="products-slide__text">Профиль VEKA SUNLINE - высококачественный
+												вариант, идеально подходящий для использования в частном малоэтажном
+												строительстве.
+											</div>
+											<ul class="products-slide__list slider-list">
+												<li class="slider-list__item">
+													<div class="slider-list__name">Системная глубина</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">60/60 мм</div>
+												</li>
+												<li class="slider-list__item">
+													<div class="slider-list__name">Ширина стеклопакета</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">58 мм</div>
+												</li>
+												<li class="slider-list__item">
+													<div class="slider-list__name">Воздушные камеры</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">3</div>
+												</li>
+												<li class="slider-list__item">
+													<div class="slider-list__name">Теплосопротивление</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">0,70 м2С/ВТ</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="products__slide swiper-slide products-slide">
+									<div class="products-slide__img-wrap">
+										<div class="products-slide__img">
+											<img src="img/products/slide-4.webp" alt="картинка">
+										</div>
+									</div>
+
+									<div class="products-slide__inner">
+										<div class="products-slide__content">
+											<h2 class="products-slide__title">Veka Evolution</h2>
+											<div class="products-slide__text">Профиль VEKA EVOLUTION -
+												высококачественный
+												вариант, идеально подходящий для использования в частном малоэтажном
+												строительстве
+											</div>
+											<ul class="products-slide__list slider-list">
+												<li class="slider-list__item">
+													<div class="slider-list__name">Системная глубина</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">60/60 мм</div>
+												</li>
+												<li class="slider-list__item">
+													<div class="slider-list__name">Ширина стеклопакета</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">70 мм</div>
+												</li>
+												<li class="slider-list__item">
+													<div class="slider-list__name">Воздушные камеры</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">5</div>
+												</li>
+												<li class="slider-list__item">
+													<div class="slider-list__name">Теплосопротивление</div>
+													<div class="slider-list__space"></div>
+													<div class="slider-list__value">0,78 м2С/ВТ</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="products__nav">
+							<div class="products__nav-prev">
+								<svg class="icon">
+									<use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+								</svg>
+							</div>
+							<div class="products__nav-next"><svg class="icon">
+									<use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__quality quality">
+				<div class="quality__container">
+					<div class="quality__inner">
+						<div class="quality__top">
+							<div class="quality__title-image">
+								<img src="img/quality/title.webp" alt="">
+							</div>
+						</div>
+
+						<ul class="quality__list">
+							<li class="quality__item">
+								<div class="quality__image">
+									<svg class="quality__icon">
+										<use xlink:href="img/icons/icons.svg#quality-1"></use>
+									</svg>
+								</div>
+								<div class="quality__text">Сертифицированный
+									производитель Rehau
+								</div>
+							</li>
+							<li class="quality__item">
+								<div class="quality__image">
+									<svg class="quality__icon">
+										<use xlink:href="img/icons/icons.svg#quality-2"></use>
+									</svg>
+								</div>
+								<div class="quality__text">Инновационный <br>
+									оконный завод</div>
+							</li>
+							<li class="quality__item">
+								<div class="quality__image">
+									<svg class="quality__icon">
+										<use xlink:href="img/icons/icons.svg#quality-3"></use>
+									</svg>
+								</div>
+								<div class="quality__text">Лидер по переработке
+									профилей Rehau в России</div>
+							</li>
+							<li class="quality__item">
+								<div class="quality__image">
+									<svg class="quality__icon">
+										<use xlink:href="img/icons/icons.svg#quality-4"></use>
+									</svg>
+								</div>
+								<div class="quality__text">Высокотехнологичное
+									автоматизированное
+									оборудование</div>
+							</li>
+							<li class="quality__item">
+								<div class="quality__image">
+									<svg class="quality__icon">
+										<use xlink:href="img/icons/icons.svg#quality-5"></use>
+									</svg>
+								</div>
+								<div class="quality__text">Широкий <br>
+									ассортимент
+									продукции</div>
+							</li>
+						</ul>
+					</div>
+					<button data-popup="#calculation" type="button" class="quality__btn button-img button-img_vlt">
+						<span class="quality__btn-img">
+							<svg class="quality__btn-icon">
+								<use xlink:href="img/icons/icons.svg#head-btn-2"></use>
+							</svg></span>
+						<span class="quality__btn-text">Заказать
+							расчет
+						</span>
+					</button>
+				</div>
+			</section>
+			<section class="page__about products scrolling">
+				<div class="products__container">
+					<div class="products__content">
+						<h2 class="products__title title">О компании</h2>
+					</div>
+					<div id="about-btns" class="products__slider-btns action-buttons"></div>
+					<div class="products__slider-body">
+						<div id="about" class="products__slider swiper">
+							<div class="products__wrapper swiper-wrapper">
+								<div class="products__slide swiper-slide about-us">
+									<div class="about-us__inner">
+										<div class="about-us__content">
+											<div class="about-us__logo">
+												<img src="img/quality/logo-big.webp" alt="logo">
+											</div>
+											<div class="about-us__bottom">
+												<div class="about-us__text">Мы помогаем клиентам подбирать решения,
+													учитывая пожелания к
+													характеристикам окна и его стоимости. Окно - это объект,
+													которым Вы будете пользоваться много лет, поэтому для нас очень
+													важно,
+													чтобы
+													Вы сделали правильный выбор.
+												</div>
+											</div>
+
+
+										</div>
+									</div>
+									<div class="about-us__video-wrap">
+										<div class="about-us__video">
+											<div id="play" class="about-us__video-control"></div>
+											<div id="pause" class="about-us__video-control"></div>
+											<video id="video" poster="img/quality/01.webp" />
+											<source src="files/oknahaus.mp4" type='video/mp4'>
+											</video>
+										</div>
+									</div>
+
+								</div>
+								<div data-tabs data-tabs-animate class="products__slide swiper-slide how">
+									<div class="how__top">
+										<h2 class="how__title title">Как мы работаем</h2>
+									</div>
+									<nav data-tabs-titles class="how__tabs-navigation">
+										<button type="button" class="how__tabs-title _tab-active">
+											<span>Бесплатно приедем</span>
+										</button>
+										<button type="button" class="how__tabs-title"><span>Выезжаем
+												ежедневно</span></button>
+										<button type="button" class="how__tabs-title"><span>Образцы с
+												собой</span></button>
+										<button type="button" class="how__tabs-title"><span>Стоимость</span></button>
+									</nav>
+									<ul data-tabs-body class="how__list">
+										<li class="how__item">
+											<div class="how__image">
+												<svg class="how__icon">
+													<use xlink:href="img/icons/icons.svg#work-1"></use>
+												</svg>
+											</div>
+											<div class="how__text">
+												<span>Бесплатно приедем</span>
+												Выезжаем бесплатно во все
+												города Московской области
+											</div>
+										</li>
+										<li class="how__item">
+											<div class="how__image"><svg class="how__icon">
+													<use xlink:href="img/icons/icons.svg#work-2"></use>
+												</svg></div>
+											<div class="how__text">
+												<span>Выезжаем ежедневно</span>
+												С 9 до 21 без выходных
+												и праздников
+											</div>
+										</li>
+										<li class="how__item">
+											<div class="how__image"><svg class="how__icon">
+													<use xlink:href="img/icons/icons.svg#work-3"></use>
+												</svg></div>
+											<div class="how__text">
+												<span>Образцы с собой</span>
+												Покажем образцы профильных
+												систем и материалов отделки
+											</div>
+										</li>
+										<li class="how__item">
+											<div class="how__image"><svg class="how__icon">
+													<use xlink:href="img/icons/icons.svg#work-4"></use>
+												</svg></div>
+											<div class="how__text">
+												<span>Стоимость</span>
+												Называем точную стоимость
+												заказа на месте
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="products__slide swiper-slide review">
+									<div class="review__nav">
+										<div class="review__nav-prev">
+											<svg class="review__nav-icon">
+												<use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+											</svg>
+										</div>
+										<div class="review__nav-next">
+											<svg class="review__nav-icon">
+												<use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="review__inner">
+										<div class="review__slider-body">
+											<div id="review-slider" class="review__slider swiper">
+												<div class="review__wrapper swiper-wrapper">
+													<div data-showmore data-showmore-media="768,max" class="review__slide review-slide">
+														<div class="review-slide__top">
+															<div class="review-slide__name">Раиса Михайлова</div>
+															<div class="review-slide__order">
+																<span>24.06.2021</span> Договор №123456
+															</div>
+														</div>
+														<div data-showmore-content="200" class="review-slide__review">
+															<p>
+																Огромное СПАСИБО всей команде
+																Дизайн-Окно! В июне 2021 заказывала переостекление +
+																отделка
+																балкона первый раз и так все
+																удачно - быстро, качественно. Все прошло отлично, в
+																соответствии с условиями договора. Замерщик приехал как
+																оговорено
+																без опозданий, произвел замер лазерным уровнем, все
+																подробно
+																рассказал по профилю и комплектующим. Предоплата
+																составила
+																20%, остаток - по факту. Соотношение цена/качество в
+																сравнении с конкурентами. Доставка точно в срок, за 3
+																дня
+																все
+																установили. Итог - красивые окна. Будем зимой проверять
+																на
+																прочность :)
+															</p>
+															<p>
+																Большая благодарность за отлично проведённую работу!
+																Замерщик по вызову пришёл быстро, всё хорошо объяснил ,
+																окна
+																пришли
+																в соответствии со согласованной датой, поднятие в
+																квартиру
+																прошла очень хорошо , монтажники справились со своей
+																работой
+																на отлично! Все прошло в позитиве, соотношение цены и
+																качества хорошее. Отличная команда! Спасибо!!!
+															</p>
+														</div>
+														<button hidden data-showmore-button type="button" class="review-slide__more-btn">
+															<span>Показать еще</span>
+															<span>Скрыть</span>
+														</button>
+													</div>
+													<div data-showmore data-showmore-media="768,max" class="review__slide review-slide">
+														<div class="review-slide__top">
+															<div class="review-slide__name">Галина Ивановна</div>
+															<div class="review-slide__order">
+																<span>14.03.2024</span> Договор №122435
+															</div>
+														</div>
+														<div data-showmore-content="200" class="review-slide__review">
+															<p>
+																В феврале 2024 года мы решили
+																обновить окна в нашей гостиной. Нам посоветовали
+																установить
+																окна с датчиками открытия и
+																подключить их к системе «умный дом». Теперь мы можем
+																контролировать состояние окон прямо со смартфона — это
+																чрезвычайно
+																удобно. Специалисты выполнили работу быстро и аккуратно,
+																оставив после себя идеальную чистоту. Мы даже не
+																предполагали,
+																что технология и комфорт могут быть настолько тесно
+																связаны.
+															</p>
+														</div>
+														<button hidden data-showmore-button type="button" class="review-slide__more-btn">
+															<span>Показать еще</span>
+															<span>Скрыть</span>
+														</button>
+													</div>
+													<div data-showmore data-showmore-media="768,max" class="review__slide review-slide">
+														<div class="review-slide__top">
+															<div class="review-slide__name">Даниил Юрьевич</div>
+															<div class="review-slide__order">
+																<span>15.07.2023</span> Договор №113476
+															</div>
+														</div>
+														<div data-showmore-content="200" class="review-slide__review">
+															<p>
+																Расстались с фирмой лучшими
+																друзьями, так чудесно нам они остеклили балкон. Это было
+																накануне зимы, всё нравилось, всё
+																красиво было, но зимний сезон выявил один нюанс, окна
+																начали
+																сквозить. Позвонил в офис, поделился с ними моей
+																проблемой,
+																пообещали, что приедет мастер на осмотр. Действительно,
+																в
+																ближайшее время нам всё было исправлено, мастер поменял
+																уплотнительные резинки, чуть подтянул петли, теперь
+																балкон
+																радует уютом и достойной визуальной картиной.
+															</p>
+														</div>
+														<button hidden data-showmore-button type="button" class="review-slide__more-btn">
+															<span>Показать еще</span>
+															<span>Скрыть</span>
+														</button>
+													</div>
+													<div data-showmore data-showmore-media="768,max" class="review__slide review-slide">
+														<div class="review-slide__top">
+															<div class="review-slide__name">Анастасия Владимировна</div>
+															<div class="review-slide__order">
+																<span>07.01.2024</span> Договор №124428
+															</div>
+														</div>
+														<div data-showmore-content="200" class="review-slide__review">
+															<p>
+																Очень оперативная и
+																профессиональная работа, грамотные советы от оценщика
+																(без
+																него я бы не разобралась, какие именно
+																окна мне лучше заказывать). Открывать и закрывать
+																удобно,
+																откосы практически не повредили. Сделано красиво.
+																Стеклопакеты
+																стоят уже полгода, помещение коммерческое, первый этаж,
+																раньше было очень холодно, постоянно работали
+																обогреватели.
+																В
+																этом холодном сезоне обогреватели не включаем))
+																коллектив
+																доволен!
+															</p>
+														</div>
+														<button hidden data-showmore-button type="button" class="review-slide__more-btn">
+															<span>Показать еще</span>
+															<span>Скрыть</span>
+														</button>
+													</div>
+													<div data-showmore data-showmore-media="768,max" class="review__slide review-slide">
+														<div class="review-slide__top">
+															<div class="review-slide__name">Егор Михайлович</div>
+															<div class="review-slide__order">
+																<span>24.06.2021</span> Договор №124753
+															</div>
+														</div>
+														<div data-showmore-content="200" class="review-slide__review">
+															<p>
+																Если когда-то снова нужно
+																будет остеклить дом или другой объект недвижимости,
+																обязательно обратимся непременно только к
+																этим специалистам. Очень понравилась их хватка. Полное
+																ощущение, что люди грамотные. Решили непростую задачу с
+																очень
+																сложным по дизайну большим витражным окном. Работники
+																этой
+																фирмы с успехом осуществили наш замысел, окно получилось
+																отличным и красивым, несмотря на большой размер, входная
+																зона легко открывается и закрывается, не разболталась за
+																полгода активного использования.
+															</p>
+														</div>
+														<button hidden data-showmore-button type="button" class="review-slide__more-btn">
+															<span>Показать еще</span>
+															<span>Скрыть</span>
+														</button>
+													</div>
+												</div>
+											</div>
+											<button data-popup="#review" type="button" class="review__btn button-img button-img_org">
+												<span class="review__btn-img">
+													<svg class="review__btn-icon">
+														<use xlink:href="img/icons/icons.svg#review-btn"></use>
+													</svg>
+												</span>
+												<span class="review__btn-text">Оставить отзыв
+												</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="products__slide swiper-slide certificates">
+									<div class="certificates__nav">
+										<div class="certificates__nav-prev">
+											<svg class="certificates__nav-icon">
+												<use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+											</svg>
+										</div>
+										<div class="certificates__nav-next">
+											<svg class="certificates__nav-icon">
+												<use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="certificates__inner">
+										<div class="certificates__slider-body">
+											<div id="certificates-slider" class="certificates__slider swiper">
+												<div class="certificates__wrapper swiper-wrapper">
+													<div class="certificates__slide">
+														<img src="img/quality/slider/01.webp" alt="картинка">
+													</div>
+													<div class="certificates__slide">
+														<img src="img/quality/slider/02.webp" alt="картинка">
+													</div>
+													<div class="certificates__slide">
+														<img src="img/quality/slider/03.webp" alt="картинка">
+													</div>
+													<div class="certificates__slide">
+														<img src="img/quality/slider/04.webp" alt="картинка">
+													</div>
+													<div class="certificates__slide">
+														<img src="img/quality/slider/05.webp" alt="картинка">
+													</div>
+													<div class="certificates__slide">
+														<img src="img/quality/slider/02.webp" alt="картинка">
+													</div>
+													<div class="certificates__slide">
+														<img src="img/quality/slider/03.webp" alt="картинка">
+													</div>
+
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="products__bottom-block bottom-about">
+						<ul class="bottom-about__list">
+							<li class="bottom-about__item">
+								<div class="bottom-about__image">
+									<div class="bottom-about__img-wrap">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#about-1"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="bottom-about__content">
+									<div class="bottom-about__title">профессионализм</div>
+									<div class="bottom-about__text">Бригада профессиональных
+										мастеров по монтажу
+										и обслуживанию</div>
+								</div>
+							</li>
+							<li class="bottom-about__item">
+								<div class="bottom-about__image">
+									<div class="bottom-about__img-wrap">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#about-2"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="bottom-about__content">
+									<div class="bottom-about__title">Ценообразование</div>
+									<div class="bottom-about__text">Лучшие цены на рынке
+										пластиковых окон</div>
+								</div>
+							</li>
+							<li class="bottom-about__item">
+								<div class="bottom-about__image">
+									<div class="bottom-about__img-wrap">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#about-3"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="bottom-about__content">
+									<div class="bottom-about__title">Мобильность</div>
+									<div class="bottom-about__text">Заключение договора
+										на дому</div>
+								</div>
+							</li>
+							<li class="bottom-about__item">
+								<div class="bottom-about__image">
+									<div class="bottom-about__img-wrap">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#about-4"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="bottom-about__content">
+									<div class="bottom-about__title">Лояльность</div>
+									<div class="bottom-about__text">99% клиентов рекомендуют
+										нас своим друзьям</div>
+								</div>
+							</li>
+							<li class="bottom-about__item">
+								<div class="bottom-about__image">
+									<div class="bottom-about__img-wrap">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#about-5"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="bottom-about__content">
+									<div class="bottom-about__title">Скорость</div>
+									<div class="bottom-about__text">Короткие сроки
+										установки изделий</div>
+								</div>
+							</li>
+							<li class="bottom-about__item">
+								<div class="bottom-about__image">
+									<div class="bottom-about__img-wrap">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#about-6"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="bottom-about__content">
+									<div class="bottom-about__title">Служба качества</div>
+									<div class="bottom-about__text">Безупречное качество
+										и контроль изделий ПВХ</div>
+								</div>
+							</li>
+						</ul>
+						<button data-popup="#measurement" class="bottom-about__button button-img button-img_org">
+							<span class="bottom-about__btn-img">
+								<svg class="bottom-about__btn-icon">
+									<use xlink:href="img/icons/icons.svg#head-btn-1"></use>
+								</svg></span>
+							<span class="bottom-about__btn-text">Оформить заявку на
+								замер
+							</span>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="page__portfolio portfolio scrolling">
+				<div class="portfolio__container">
+					<div class="portfolio__inner">
+						<h2 class="portfolio__title title">Портфолио</h2>
+						<div class="portfolio__slider-block">
+							<div class="portfolio__slider-wrap">
+								<div class="portfolio__nav">
+									<div class="portfolio__nav-prev">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+										</svg>
+									</div>
+									<div class="portfolio__nav-next">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+										</svg>
+									</div>
+								</div>
+								<div class="portfolio__slider swiper">
+									<div class="portfolio__wrapper swiper-wrapper">
+										<div class="portfolio__slide swiper-slide portfolio-slide">
+											<button data-popup="#p1" type="button" class="portfolio-slide__image">
+												<img src="img/portfolio/01.webp" alt="картинка">
+											</button>
+										</div>
+										<div class="portfolio__slide swiper-slide portfolio-slide">
+											<button data-popup="#p2" type="button" class="portfolio-slide__image">
+												<img src="img/portfolio/02.webp" alt="картинка">
+											</button>
+										</div>
+										<div class="portfolio__slide swiper-slide portfolio-slide">
+											<button data-popup="#p3" type="button" class="portfolio-slide__image">
+												<img src="img/portfolio/03.webp" alt="картинка">
+											</button>
+										</div>
+										<div class="portfolio__slide swiper-slide portfolio-slide">
+											<button data-popup="#p4" type="button" class="portfolio-slide__image">
+												<img src="img/portfolio/04.webp" alt="картинка">
+											</button>
+										</div>
+										<div class="portfolio__slide swiper-slide portfolio-slide">
+											<button data-popup="#p5" type="button" class="portfolio-slide__image">
+												<img src="img/portfolio/05.webp" alt="картинка">
+											</button>
+										</div>
+										<div class="portfolio__slide swiper-slide portfolio-slide">
+											<button data-popup="#p6" type="button" class="portfolio-slide__image">
+												<img src="img/portfolio/06.webp" alt="картинка">
+											</button>
+										</div>
+										<div class="portfolio__slide swiper-slide portfolio-slide">
+											<button data-popup="#p7" type="button" class="portfolio-slide__image">
+												<img src="img/portfolio/07.webp" alt="картинка">
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="map" class="portfolio__map maps"></div>
+					</div>
+				</div>
+			</section>
+			<section class="page__question question scrolling">
+				<div class="question__container">
+					<div class="question__content">
+						<h2 class="question__title title">Вопрос-ответ</h2>
+						<div data-spollers class="question__spollers spollers">
+							<details class="spollers__item">
+								<summary class="spollers__title">Ваша специализация – исключительно пластиковые окна?
+									<div class="spollers__arrow">
+										<svg class="spollers__icon">
+											<use xlink:href="img/icons/icons.svg#spoller-arrow"></use>
+										</svg>
+									</div>
+								</summary>
+								<div class="spollers__body">
+									<p>
+										Нет, мы готовы предложить своим клиентам широкий спектр услуг. Мы устанавливаем
+										пластиковые окна и балконные двери,
+										предлагаем зонирование пространства с помощью межкомнатных перегородок. Также мы
+										выполняем работы по утеплению и отделке
+										балконов.
+									</p>
+									<p>
+										В качестве дополнения вы можете выбрать стильные откосы, ламинацию оконного
+										профиля,
+										необычный подоконник – эти детали
+										помогут органично вписать окна в любой интерьер. Рулонные шторы или жалюзи
+										помогут
+										укрыться от яркого солнца, а
+										москитная сетка – от докучливых насекомых.
+									</p>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Занимаетесь ли вы остеклением частных домов и дач?
+									<div class="spollers__arrow">
+										<svg class="spollers__icon">
+											<use xlink:href="img/icons/icons.svg#spoller-arrow"></use>
+										</svg>
+									</div>
+								</summary>
+								<div class="spollers__body">
+									<p>
+										Да, мы предлагаем остекление для загородных домов, коттеджей, дачных домов.
+										Готовы
+										выполнить остекление балкона, веранды
+										или террасы. У нас вы можете заказать остекление для беседки или теплицы.
+										Предлагаем
+										холодное и теплое остекление – в
+										зависимости от ваших потребностей.
+									</p>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Современные окна – только из пластика?
+									<div class="spollers__arrow">
+										<svg class="spollers__icon">
+											<use xlink:href="img/icons/icons.svg#spoller-arrow"></use>
+										</svg>
+									</div>
+								</summary>
+								<div class="spollers__body">
+									<p>Нет, вы можете также выбрать алюминиевые или деревянные окна. В эстетических
+										целях
+										можно установить декоративную
+										раскладку – она позволяет создать изящный переплет окна</p>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Нужно ли вызывать замерщика, или можно самостоятельно
+									рассчитать всю стоимость по размерам?
+									<div class="spollers__arrow">
+										<svg class="spollers__icon">
+											<use xlink:href="img/icons/icons.svg#spoller-arrow"></use>
+										</svg>
+									</div>
+								</summary>
+								<div class="spollers__body">
+									<p>У нас можно рассчитать конечную стоимость через калькулятор, указав ваш адрес.
+										Также
+										вы можете выполнить расчет по своим
+										размерам. Вызов замерщика на дом не требуется. Записаться на монтаж вы сможете
+										по
+										телефону.</p>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Мне надо нанимать грузчиков для подъема?
+									<div class="spollers__arrow">
+										<svg class="spollers__icon">
+											<use xlink:href="img/icons/icons.svg#spoller-arrow"></use>
+										</svg>
+									</div>
+								</summary>
+								<div class="spollers__body">
+									<p>Нет, команда мастеров все сами аккуратно доставят и внесут.</p>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Можно ли оформить заказ на вашу продукцию в рассрочку?
+									<div class="spollers__arrow">
+										<svg class="spollers__icon">
+											<use xlink:href="img/icons/icons.svg#spoller-arrow"></use>
+										</svg>
+									</div>
+								</summary>
+								<div class="spollers__body">
+									<p>Да, мы готовы предоставить своим клиентам рассрочку под 0%. Также вы можете
+										оформить
+										кредит, заключив договор с одним из
+										банков-партнёров.</p>
+								</div>
+							</details>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__contacts contacts scrolling">
+				<div class="contacts__container">
+					<div class="contacts__inner">
+						<h2 class="contacts__title title">Контакты</h2>
+						<div class="contacts__content">
+							<div class="contacts__consultation consultation">
+								<h3 class="consultation__title title title_small">Бесплатная консультация:</h3>
+								<div class="consultation__phones">
+									<div class="consultation__icon">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#phone"></use>
+										</svg>
+									</div>
+									<div class="consultation__nums">
+										<a href="tel:84932343140">8 (4932) 34 - 31 - 40</a>
+										<a href="tel:89051093140">8 (905) 109 - 31 - 40</a>
+									</div>
+								</div>
+								<ul class="consultation__contacts">
+									<li class="consultation__item">
+										<div class="consultation__icon">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#loc"></use>
+											</svg>
+										</div>
+										<p>г. Иваново, ул. Генерала Хлебникова, д.54, оф.303</p>
+									</li>
+									<li class="consultation__item">
+										<div class="consultation__icon">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#email"></use>
+											</svg>
+										</div>
+										<p>okna@haus.ru</p>
+									</li>
+								</ul>
+								<div class="consultation__descr">
+									Установку должны выполнять только эксперты. Нам доверяют сотни семей.
+									Узнайте подробнее, какие решения вам подходят.
+									Вы можете приобрести недорогие товары
+									при гарантированно
+									высоком качестве.
+								</div>
+								<ul class="consultation__socials socials">
+									<li class="socials__item">
+										<a href="#">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#vk"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="socials__item">
+										<a href="#">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#facebook"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="socials__item">
+										<a href="#">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#insta"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="socials__item">
+										<a href="#">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#tg"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="socials__item">
+										<a href="#">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#youtube"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="socials__item">
+										<a href="#">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#ok"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="consultation__message send-message">
+								<div class="send-message__wrap">
+									<div class="send-message__inner">
+										<h2 class="send-message__title title">Остались вопросы?</h2>
+										<form action="#" class="send-message__form message">
+											<div class="message__inputs">
+												<input autocomplete="off" type="text" name="name" data-error="Ошибка" placeholder="Ваше имя" class="message__input">
+												<input autocomplete="off" type="text" name="email" data-error="Ошибка" placeholder="E-mail" class="message__input">
+											</div>
+											<textarea autocomplete="off" name="review" placeholder="Ваш отзыв" data-error="Ошибка" class="message__textarea"></textarea>
+											<label for="policy" class="message__label confirm">
+												<input id="policy" autocomplete="off" type="checkbox" name="policy" data-error="Ошибка" class="message__checkbox">
+												<div class="message__custom-checkbox"></div>
+												<p>Я согласен(на) на обработку <a href="#">персональных данных</a></p>
+											</label>
+											<button type="submit" class="message__btn button">Отправить
+												сообщение</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__inner">
+					<div class="footer__logo">
+						<img src="img/logo-small.svg" width="55" height="39" alt="logo">
+					</div>
+					<div class="footer__info">
+						<p class="footer__copy">© ООО “Окна Хаус”, 2011 - 2022</p>
+						<div class="footer__links">
+							<a href="#" class="footer__policy">Политика конфиденциальности </a>
+							<a href="#" class="footer__policy">Пользовательское соглашение</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- ================== карты ==================== -->
+	<div id="p1" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<div class="popup__top top-popup">
+						<div class="top-popup__slider-block">
+							<div class="top-popup__slider top-popup__slider_1 swiper">
+								<div data-gallery class="top-popup__wrapper swiper-wrapper gallery">
+									<a href="img/portfolio/popup/1/1.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/1/1.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/1/2.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/1/2.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/1/3.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/1/3.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/1/4.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/1/4.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/1/5.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/1/4.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/1/6.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/1/4.webp" class="gallery__preview">
+									</a>
+								</div>
+							</div>
+							<div id="pagin1" class="top-popup__pagination"></div>
+						</div>
+						<div class="top-popup__content popup-content">
+							<div class="popup-content__location">
+								<div class="popup-content__date">
+									<span>17.10.2021</span>
+								</div>
+								<div class="popup-content__address">
+									<div class="popup-content__icon">
+										<img src="img/portfolio/location.svg" alt="icon">
+									</div>
+									<p>г Иваново, ул Лётчика Лазарева, д 8</p>
+								</div>
+							</div>
+							<h2 class="popup-content__title title">
+								Теплое остекление веранды
+							</h2>
+							<ul class="popup-content__about">
+								<li class="popup-content__item">
+									<p class="popup-content__property">Что делали:
+									</p>
+									<p class="popup-content__value">Профильная система REHAU Intelio 80
+									</p>
+								</li>
+								<li class="popup-content__item">
+									<p class="popup-content__property">Категории объекта:
+									</p>
+									<p class="popup-content__value">Окна Теплое остекление веранды</p>
+								</li>
+							</ul>
+							<div class="popup-content__buttons">
+								<button data-popup="#measurement" type="button" class="popup-content__button button-img button-img_org">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-1"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заявка на замер
+									</span>
+								</button>
+								<button data-popup="#calculation" type="button" class="popup-content__button button-img button-img_vlt">
+									<span class="popup-content__btn-img">
+										<svg style="width: 25px; height: 19px; color: #EF7F1A;" class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#price"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Узнать цену
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="popup__bottom">
+						<div id="map-1" class="portfolio__map maps"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
+	<div id="p2" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<div class="popup__top top-popup">
+						<div class="top-popup__slider-block">
+							<div class="top-popup__slider top-popup__slider_2 swiper">
+								<div data-gallery class="top-popup__wrapper swiper-wrapper">
+									<a href="img/portfolio/popup/2/1.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/2/1.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/2/2.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/2/2.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/2/3.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/2/3.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/2/4.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/2/4.webp" class="gallery__preview">
+									</a>
+								</div>
+							</div>
+							<div id="pagin2" class="top-popup__pagination"></div>
+						</div>
+						<div class="top-popup__content popup-content">
+							<div class="popup-content__location">
+								<div class="popup-content__date">
+									<span>16.11.2022</span>
+								</div>
+								<div class="popup-content__address">
+									<div class="popup-content__icon">
+										<img src="img/portfolio/location.svg" alt="icon">
+									</div>
+									<p>г Иваново, ул Павла Большевикова, д 6</p>
+								</div>
+							</div>
+							<h2 class="popup-content__title title">
+								Панорамное остекление квартиры
+							</h2>
+							<ul class="popup-content__about">
+								<li class="popup-content__item">
+									<p class="popup-content__property">Что делали:
+									</p>
+									<p class="popup-content__value">Установлено французское остекление с использованием
+										профиля REHAU Delight
+									</p>
+								</li>
+								<li class="popup-content__item">
+									<p class="popup-content__property">Категории объекта:
+									</p>
+									<p class="popup-content__value">Окна Балконный блок</p>
+								</li>
+							</ul>
+							<div class="popup-content__buttons">
+								<button data-popup="#measurement" type="button" class="popup-content__button button-img button-img_org">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-1"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заявка на замер
+									</span>
+								</button>
+								<button data-popup="#calculation" type="button" class="popup-content__button button-img button-img_vlt">
+									<span class="popup-content__btn-img">
+										<svg style="width: 25px; height: 19px; color: #EF7F1A;" class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#price"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Узнать цену
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="popup__bottom">
+						<div id="map-2" class="portfolio__map maps"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="p3" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<div class="popup__top top-popup">
+						<div class="top-popup__slider-block">
+							<div class="top-popup__slider top-popup__slider_3 swiper">
+								<div data-gallery class="top-popup__wrapper swiper-wrapper">
+									<a href="img/portfolio/popup/3/1.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/3/1.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/3/2.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/3/2.webp" class="gallery__preview">
+									</a>
+								</div>
+							</div>
+							<div id="pagin3" class="top-popup__pagination"></div>
+						</div>
+						<div class="top-popup__content popup-content">
+							<div class="popup-content__location">
+								<div class="popup-content__date">
+									<span>15.03.2021</span>
+								</div>
+								<div class="popup-content__address">
+									<div class="popup-content__icon">
+										<img src="img/portfolio/location.svg" alt="icon">
+									</div>
+									<p>г Иваново, ул Герасима Фейгина, д 115</p>
+								</div>
+							</div>
+							<h2 class="popup-content__title title">
+								Остекление и монтаж балконного блока
+							</h2>
+							<ul class="popup-content__about">
+								<li class="popup-content__item">
+									<p class="popup-content__property">Что делали:
+									</p>
+									<p class="popup-content__value">Выполнена установка балконного блока, а также остекление
+										комнаты.
+									</p>
+								</li>
+								<li class="popup-content__item">
+									<p class="popup-content__property">Категории объекта:
+									</p>
+									<p class="popup-content__value">Окна Балконный блок</p>
+								</li>
+							</ul>
+							<div class="popup-content__buttons">
+								<button data-popup="#measurement" type="button" class="popup-content__button button-img button-img_org">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-1"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заявка на замер
+									</span>
+								</button>
+								<button data-popup="#calculation" type="button" class="popup-content__button button-img button-img_vlt">
+									<span class="popup-content__btn-img">
+										<svg style="width: 25px; height: 19px; color: #EF7F1A;" class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#price"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Узнать цену
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="popup__bottom">
+						<div id="map-3" class="portfolio__map maps"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="p4" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<div class="popup__top top-popup">
+						<div class="top-popup__slider-block">
+							<div class="top-popup__slider top-popup__slider_4 swiper">
+								<div data-gallery class="top-popup__wrapper swiper-wrapper">
+									<a href="img/portfolio/popup/4/1.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/4/1.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/4/2.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/4/2.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/4/3.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/4/3.webp" class="gallery__preview">
+									</a>
+								</div>
+							</div>
+							<div id="pagin4" class="top-popup__pagination"></div>
+						</div>
+						<div class="top-popup__content popup-content">
+							<div class="popup-content__location">
+								<div class="popup-content__date">
+									<span>22.08.2021</span>
+								</div>
+								<div class="popup-content__address">
+									<div class="popup-content__icon">
+										<img src="img/portfolio/location.svg" alt="icon">
+									</div>
+									<p>г Иваново, садовое некоммерческое товарищество Юбилейный-1, 55</p>
+								</div>
+							</div>
+							<h2 class="popup-content__title title">
+								Установка окна в частном доме
+							</h2>
+							<ul class="popup-content__about">
+								<li class="popup-content__item">
+									<p class="popup-content__property">Что делали:
+									</p>
+									<p class="popup-content__value">Произведена установка окна и отделка отокос
+									</p>
+								</li>
+								<li class="popup-content__item">
+									<p class="popup-content__property">Категории объекта:
+									</p>
+									<p class="popup-content__value">Остекление коттеджа</p>
+								</li>
+							</ul>
+							<div class="popup-content__buttons">
+								<button data-popup="#measurement" type="button" class="popup-content__button button-img button-img_org">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-1"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заявка на замер
+									</span>
+								</button>
+								<button data-popup="#calculation" type="button" class="popup-content__button button-img button-img_vlt">
+									<span class="popup-content__btn-img">
+										<svg style="width: 25px; height: 19px; color: #EF7F1A;" class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#price"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Узнать цену
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="popup__bottom">
+						<div id="map-4" class="portfolio__map maps"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="p5" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<div class="popup__top top-popup">
+						<div class="top-popup__slider-block">
+							<div class="top-popup__slider top-popup__slider_5 swiper">
+								<div data-gallery class="top-popup__wrapper swiper-wrapper">
+									<a href="img/portfolio/popup/5/1.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/5/1.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/5/2.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/5/2.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/5/3.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/5/3.webp" class="gallery__preview">
+									</a>
+								</div>
+							</div>
+							<div id="pagin5" class="top-popup__pagination"></div>
+						</div>
+						<div class="top-popup__content popup-content">
+							<div class="popup-content__location">
+								<div class="popup-content__date">
+									<span>18.02.2022</span>
+								</div>
+								<div class="popup-content__address">
+									<div class="popup-content__icon">
+										<img src="img/portfolio/location.svg" alt="icon">
+									</div>
+									<p>г Иваново, 2-й переулок Бабушкина,, д 13</p>
+								</div>
+							</div>
+							<h2 class="popup-content__title title">
+								Остекление комнаты
+							</h2>
+							<ul class="popup-content__about">
+								<li class="popup-content__item">
+									<p class="popup-content__property">Что делали:
+									</p>
+									<p class="popup-content__value">Остекление выполнено окнами с повышенными показателями
+										тепло- и шумоизоляции REHAU Sib. Также установлен пластиковый
+										подоконник.
+									</p>
+								</li>
+								<li class="popup-content__item">
+									<p class="popup-content__property">Категории объекта:
+									</p>
+									<p class="popup-content__value">Установка пластиковых окон, Монтаж подоконников</p>
+								</li>
+							</ul>
+							<div class="popup-content__buttons">
+								<button data-popup="#measurement" type="button" class="popup-content__button button-img button-img_org">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-1"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заявка на замер
+									</span>
+								</button>
+								<button data-popup="#calculation" type="button" class="popup-content__button button-img button-img_vlt">
+									<span class="popup-content__btn-img">
+										<svg style="width: 25px; height: 19px; color: #EF7F1A;" class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#price"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Узнать цену
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="popup__bottom">
+						<div id="map-5" class="portfolio__map maps"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="p6" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<div class="popup__top top-popup">
+						<div class="top-popup__slider-block">
+							<div class="top-popup__slider top-popup__slider_6 swiper">
+								<div data-gallery class="top-popup__wrapper swiper-wrapper">
+									<a href="img/portfolio/popup/6/1.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/6/1.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/6/2.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/6/2.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/6/3.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/6/3.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/6/4.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/6/4.webp" class="gallery__preview">
+									</a>
+								</div>
+							</div>
+							<div id="pagin6" class="top-popup__pagination"></div>
+						</div>
+						<div class="top-popup__content popup-content">
+							<div class="popup-content__location">
+								<div class="popup-content__date">
+									<span>08.10.2021</span>
+								</div>
+								<div class="popup-content__address">
+									<div class="popup-content__icon">
+										<img src="img/portfolio/location.svg" alt="icon">
+									</div>
+									<p>г Иваново, ул Ташкентская, д 4 к 1</p>
+								</div>
+							</div>
+							<h2 class="popup-content__title title">
+								Монтаж окна и балконного блока
+							</h2>
+							<ul class="popup-content__about">
+								<li class="popup-content__item">
+									<p class="popup-content__property">Что делали:
+									</p>
+									<p class="popup-content__value">Профильная система Rehau Blitz Фурнитура Roto NT
+									</p>
+								</li>
+								<li class="popup-content__item">
+									<p class="popup-content__property">Категории объекта:
+									</p>
+									<p class="popup-content__value">Окна Балконный блок</p>
+								</li>
+							</ul>
+							<div class="popup-content__buttons">
+								<button data-popup="#measurement" type="button" class="popup-content__button button-img button-img_org">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-1"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заявка на замер
+									</span>
+								</button>
+								<button data-popup="#calculation" type="button" class="popup-content__button button-img button-img_vlt">
+									<span class="popup-content__btn-img">
+										<svg style="width: 25px; height: 19px; color: #EF7F1A;" class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#price"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Узнать цену
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="popup__bottom">
+						<div id="map-6" class="portfolio__map maps"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="p7" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<div class="popup__top top-popup">
+						<div class="top-popup__slider-block">
+							<div class="top-popup__slider top-popup__slider_7 swiper">
+								<div data-gallery class="top-popup__wrapper swiper-wrapper">
+									<a href="img/portfolio/popup/7/1.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/7/1.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/7/2.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/7/2.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/7/3.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/7/3.webp" class="gallery__preview">
+									</a>
+									<a href="img/portfolio/popup/7/4.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/portfolio/popup/7/4.webp" class="gallery__preview">
+									</a>
+								</div>
+							</div>
+							<div id="pagin7" class="top-popup__pagination"></div>
+						</div>
+						<div class="top-popup__content popup-content">
+							<div class="popup-content__location">
+								<div class="popup-content__date">
+									<span>06.05.2022</span>
+								</div>
+								<div class="popup-content__address">
+									<div class="popup-content__icon">
+										<img src="img/portfolio/location.svg" alt="icon">
+									</div>
+									<p>село Подвязновский, 10, Подвязновское сельское поселение, Ивановский район</p>
+								</div>
+							</div>
+							<h2 class="popup-content__title title">
+								Остекление балкона и установка балконного блока
+							</h2>
+							<ul class="popup-content__about">
+								<li class="popup-content__item">
+									<p class="popup-content__property">Что делали:
+									</p>
+									<p class="popup-content__value">Установлен балконный блок и выполнено остекление балкона
+										в кирпичном доме.
+									</p>
+								</li>
+								<li class="popup-content__item">
+									<p class="popup-content__property">Категории объекта:
+									</p>
+									<p class="popup-content__value">Окна Балконный блок</p>
+								</li>
+							</ul>
+							<div class="popup-content__buttons">
+								<button data-popup="#measurement" type="button" class="popup-content__button button-img button-img_org">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-1"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заявка на замер
+									</span>
+								</button>
+								<button data-popup="#calculation" type="button" class="popup-content__button button-img button-img_vlt">
+									<span class="popup-content__btn-img">
+										<svg style="width: 25px; height: 19px; color: #EF7F1A;" class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#price"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Узнать цену
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="popup__bottom">
+						<div id="map-7" class="portfolio__map maps"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ================================= -->
+	<div id="measurement" aria-hidden="true" class="popup popup_request">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text request-popup">
+					<div class="request-popup__banner banner-request">
+						<div class="banner-request__body">
+							<div class="banner-request__top-block">
+								<span class="banner-request__icon">
+									<svg class="banner-request__icon-image">
+										<use xlink:href="img/icons/icons.svg#head-btn-1"></use>
+									</svg>
+								</span>
+								<h2 class="banner-request__title title">Вызвать замерщика на дом</h2>
+							</div>
+							<form action="#" class="banner-request__form request-form">
+								<input autocomplete="off" type="text" name="form-name" data-error="Ошибка" placeholder="Ваше имя" class="request-form__input">
+								<input autocomplete="off" type="text" name="form-tel" data-error="Ошибка" placeholder="Номер телефона" class="request-form__input">
+								<input autocomplete="off" type="email" name="form-email" data-error="Ошибка" placeholder="E-mail" class="request-form__input">
+								<div class="banner-form__check request-form__check">
+									<label>
+										<input type="checkbox" name="form-checkbox" data-error="Ошибка" class="banner-form__check-true">
+										<div class="banner-form__check-fake">
+											<svg class="banner-form__icon">
+												<use xlink:href="img/icons/icons.svg#choose-small"></use>
+											</svg>
+										</div>
+										<p class="banner-form__policy">
+											Я согласен(на) на
+											обработку <a href="#" class="banner-form__link">персональных данных</a>
+										</p>
+									</label>
+								</div>
+								<button class="banner-form__button button">Отправить заявку</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="calculation" aria-hidden="true" class="popup popup_request">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text request-popup">
+					<div class="request-popup__banner banner-request">
+						<div class="banner-request__body">
+							<div class="banner-request__top-block">
+								<span class="banner-request__icon">
+									<svg class="banner-request__icon-image">
+										<use xlink:href="img/icons/icons.svg#head-btn-2"></use>
+									</svg>
+								</span>
+								<h2 class="banner-request__title title">Заказать расчет</h2>
+							</div>
+							<form action="#" class="banner-request__form request-form">
+								<input autocomplete="off" type="text" name="form-name" data-error="Ошибка" placeholder="Ваше имя" class="request-form__input">
+								<input autocomplete="off" type="text" name="form-tel" data-error="Ошибка" placeholder="Номер телефона" class="request-form__input">
+								<input autocomplete="off" type="email" name="form-email" data-error="Ошибка" placeholder="E-mail" class="request-form__input">
+								<div class="banner-form__check request-form__check">
+									<label>
+										<input type="checkbox" name="form-checkbox" data-error="Ошибка" class="banner-form__check-true">
+										<div class="banner-form__check-fake">
+											<svg class="banner-form__icon">
+												<use xlink:href="img/icons/icons.svg#choose-small"></use>
+											</svg>
+										</div>
+										<p class="banner-form__policy">
+											Я согласен(на) на
+											обработку <a href="#" class="banner-form__link">персональных данных</a>
+										</p>
+									</label>
+								</div>
+								<button class="banner-form__button button">Заказать расчет</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="review" aria-hidden="true" class="popup popup_request">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text request-popup">
+					<div class="request-popup__banner banner-request">
+						<div class="banner-request__body">
+							<div class="banner-request__top-block">
+								<span class="banner-request__icon">
+									<svg class="banner-request__icon-image">
+										<use xlink:href="img/icons/icons.svg#review-btn"></use>
+									</svg>
+								</span>
+								<h2 class="banner-request__title title">Добавьте Ваш отзыв</h2>
+							</div>
+							<form action="#" class="banner-request__form request-form">
+								<input autocomplete="off" type="text" name="form-name" data-error="Ошибка" placeholder="Ваше имя" class="request-form__input">
+								<input autocomplete="off" type="text" name="form-tel" data-error="Ошибка" placeholder="Номер телефона" class="request-form__input">
+								<input autocomplete="off" type="email" name="form-email" data-error="Ошибка" placeholder="E-mail" class="request-form__input">
+								<textarea autocomplete="off" name="textarea" placeholder="Ваш отзыв" data-error="Ошибка" class="request-form__textarea"></textarea>
+								<div class="banner-form__check request-form__check">
+									<label>
+										<input type="checkbox" name="form-checkbox" data-error="Ошибка" class="banner-form__check-true">
+										<div class="banner-form__check-fake">
+											<svg class="banner-form__icon">
+												<use xlink:href="img/icons/icons.svg#choose-small"></use>
+											</svg>
+										</div>
+										<p class="banner-form__policy">
+											Я согласен(на) на
+											обработку <a href="#" class="banner-form__link">персональных данных</a>
+										</p>
+									</label>
+								</div>
+								<button class="banner-form__button button">Оставить отзыв</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ================================= -->
+	<div id="installation" aria-hidden="true" class="popup servises-popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<div class="popup__top top-popup">
+						<div class="top-popup__slider-block">
+							<div id="installation-slider" class="top-popup__slider swiper">
+								<div data-gallery class="top-popup__wrapper swiper-wrapper gallery">
+									<a href="img/services/installation/1.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/installation/1.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/installation/2.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/installation/2.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/installation/3.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/installation/3.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/installation/4.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/installation/4.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/installation/5.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/installation/5.webp" class="gallery__preview">
+									</a>
+								</div>
+								<div id="installation-slider-pagin" class="top-popup__pagination servises-pagination"></div>
+							</div>
+
+						</div>
+						<div class="top-popup__content popup-content">
+							<h2 class="popup-content__title title">
+								Установка пластиковых окон
+							</h2>
+							<div class="popup-content__text">
+								Пластиковые окна Rehau <br>
+								от проверенного производителя с<br>
+								гарантией качества
+							</div>
+							<div class="popup-content__buttons">
+								<button data-popup="#measurement" type="button" class="popup-content__button button-img button-img_org">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-1"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заявка на замер
+									</span>
+								</button>
+								<button data-popup="#calculation" type="button" class="popup-content__button button-img button-img_vlt">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-2"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заказать расчет
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="popup__bottom popup-cards">
+						<ul class="popup-cards__list">
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="0 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-1"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Пластиковые окна
+									</h4>
+									<div class="popup-cards__text">Использование ламинационных окон, ламинации в массе,
+										3д-ламинации, а также покраска окон.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="0 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-2"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Ламинация
+									</h4>
+									<div class="popup-cards__text">Пластиковые окна могут быть любого нужного вам цвета.
+										Внутри и снаружи</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="5 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-3"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Подоконники</h4>
+									<div class="popup-cards__text">Качественный подоконник не царапается, выдерживает
+										большие нагрузки и будет служить вам долгие годы.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-4"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Цветные ручки</h4>
+									<div class="popup-cards__text">Оригинальные оконные ручки подчеркнут дизайн окна.
+										Подберем оптимальный цвет ручек в зависимости от цвета всей конструкции.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="5 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-5"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Проветриватели</h4>
+									<div class="popup-cards__text">Постоянное обновление воздуха в комнате снижает риск
+										аллергии, улучшает сон и благоприятно влияет на самочувствие.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="3 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-6"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Москитные сетки</h4>
+									<div class="popup-cards__text">Нежеланные насекомые останутся на улице, а ваша кошка - в
+										квартире. Устанавливаем сетки для пластиковых окон любых форм и размеров.
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="popup-cards__bg">
+							<img src="img/services/installation/bg.webp" alt="картинка">
+						</div>
+						<div class="popup-cards__bg-gradient">
+							<img src="img/services/installation/gradient.webp" alt="картинка">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="glazing" aria-hidden="true" class="popup servises-popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<div class="popup__top top-popup">
+						<div class="top-popup__slider-block">
+							<div id="glazing-slider" class="top-popup__slider swiper">
+								<div data-gallery class="top-popup__wrapper swiper-wrapper gallery">
+									<a href="img/services/glazing/5.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/glazing/5.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/glazing/2.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/glazing/2.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/glazing/3.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/glazing/3.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/glazing/4.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/glazing/4.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/glazing/1.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/glazing/1.webp" class="gallery__preview">
+									</a>
+								</div>
+								<div id="glazing-slider-pagin" class="top-popup__pagination servises-pagination"></div>
+							</div>
+
+						</div>
+						<div class="top-popup__content popup-content">
+							<h2 class="popup-content__title title">
+								Остекление балконов и лоджий
+							</h2>
+							<div class="popup-content__text">
+								Занимаемся остеклением и отделкой <br>
+								балконов и лоджий. Теплое и холодное <br> остекление, изготовление выносов и крыш. <br>
+								Беремся за
+								сложные объекты
+							</div>
+							<div class="popup-content__buttons">
+								<button data-popup="#measurement" type="button" class="popup-content__button button-img button-img_org">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-1"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заявка на замер
+									</span>
+								</button>
+								<button data-popup="#calculation" type="button" class="popup-content__button button-img button-img_vlt">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-2"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заказать расчет
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="popup__bottom popup-cards">
+						<ul class="popup-cards__list">
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="0 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-1"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Тёплое
+										остекление
+
+									</h4>
+									<div class="popup-cards__text">Теплое остекление — возможность сделать из балкона или
+										лоджии полноценное жилое помещение.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="0 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-2"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Холодное
+										остекление
+									</h4>
+									<div class="popup-cards__text">Холодное остекление рекомендовано в случаях, когда балкон
+										или лоджия используются для хранения вещей.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="5 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-3"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Панорамное
+										остекление
+									</h4>
+									<div class="popup-cards__text">Остекление от пола до потолка, дающее максимальное
+										естественное освещение
+										и прекрасный обзор окрестностей.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-4"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Остекление
+										с выносом</h4>
+									<div class="popup-cards__text">Способ увеличения площади и объема балкона или лоджии.
+									</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="5 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-5"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Остекление с крышей
+									</h4>
+									<div class="popup-cards__text">Строительство крыши для домов
+										с высоким потолком и квартир, расположенных на последних этажах.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="3 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-6"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Объединение
+										с комнатой</h4>
+									<div class="popup-cards__text">Перепланировка квартиры, дающая дополнительные метры
+										полезной площади и улучшающая жилищные условия.
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="popup-cards__bg">
+							<img src="img/services/glazing/bg.webp" alt="картинка">
+						</div>
+						<div class="popup-cards__bg-gradient">
+							<img src="img/services/installation/gradient.webp" alt="картинка">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="cottages" aria-hidden="true" class="popup servises-popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<div class="popup__top top-popup">
+						<div class="top-popup__slider-block">
+							<div id="cottages-slider" class="top-popup__slider swiper">
+								<div data-gallery class="top-popup__wrapper swiper-wrapper gallery">
+									<a href="img/services/cottages/5.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/cottages/5.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/cottages/2.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/cottages/2.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/cottages/3.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/cottages/3.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/cottages/4.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/cottages/4.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/cottages/1.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/cottages/1.webp" class="gallery__preview">
+									</a>
+								</div>
+								<div id="cottages-slider-pagin" class="top-popup__pagination servises-pagination"></div>
+							</div>
+
+						</div>
+						<div class="top-popup__content popup-content">
+							<h2 class="popup-content__title title">
+								Остекление коттеджей и дач
+							</h2>
+							<div class="popup-content__text">
+								Остекление и отделка под ключ:
+								от коттеджей
+								и дач до террас
+								и беседок. Выделяем личного
+								технолога под каждый объект.
+							</div>
+							<div class="popup-content__buttons">
+								<button data-popup="#measurement" type="button" class="popup-content__button button-img button-img_org">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-1"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заявка на замер
+									</span>
+								</button>
+								<button data-popup="#calculation" type="button" class="popup-content__button button-img button-img_vlt">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-2"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заказать расчет
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="popup__bottom popup-cards">
+						<ul class="popup-cards__list">
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="0 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-1"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Цветные окна
+									</h4>
+									<div class="popup-cards__text">Использование ламинационных окон, ламинации в массе,
+										3д-ламинации,
+										а также покраска окон.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="0 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-2"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Фигурные окна
+									</h4>
+									<div class="popup-cards__text">Арочные окна, окна трапеции, треугольные окна, круглые и
+										многоугольные окна.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="5 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-3"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Алюминиевые конструкции
+									</h4>
+									<div class="popup-cards__text">Идеальный вариант для
+										большой площади остекления:
+										зимние сады, террасы и т.п..</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-4"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Деревянные окна</h4>
+									<div class="popup-cards__text">Экологичное и натуральное
+										решение для остекления
+										любого объекта.
+									</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="5 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-5"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Портальные решения
+									</h4>
+									<div class="popup-cards__text">Эксклюзивные дверные и балконные раздвижные
+										конструкции для элитных квартир и респектабельных
+										домов, обеспечивающие панорамный вид
+										и экономящие пространство.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="3 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-6"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Рольставни и ворота</h4>
+									<div class="popup-cards__text">Защитные рольставни
+										для частных домов,
+										роллетные ворота.
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="popup-cards__bg">
+							<img src="img/services/cottages/bg.webp" alt="картинка">
+						</div>
+						<div class="popup-cards__bg-gradient">
+							<img src="img/services/installation/gradient.webp" alt="картинка">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="objects" aria-hidden="true" class="popup servises-popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<div class="popup__top top-popup">
+						<div class="top-popup__slider-block">
+							<div id="objects-slider" class="top-popup__slider swiper">
+								<div data-gallery class="top-popup__wrapper swiper-wrapper gallery">
+									<a href="img/services/objects/1.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/objects/1.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/objects/2.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/objects/2.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/objects/3.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/objects/3.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/objects/4.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/objects/4.webp" class="gallery__preview">
+									</a>
+									<a href="img/services/objects/5.webp" class="gallery__image swiper-slide">
+										<img alt="Портфолио" src="img/services/objects/5.webp" class="gallery__preview">
+									</a>
+								</div>
+								<div id="objects-slider-pagin" class="top-popup__pagination servises-pagination"></div>
+							</div>
+
+						</div>
+						<div class="top-popup__content popup-content">
+							<h2 class="popup-content__title title">
+								Остекление балконов и лоджий
+							</h2>
+							<div class="popup-content__text">
+								Занимаемся остеклением и отделкой <br>
+								балконов и лоджий. Теплое и холодное <br> остекление, изготовление выносов и крыш. <br>
+								Беремся за
+								сложные объекты
+							</div>
+							<div class="popup-content__buttons">
+								<button data-popup="#measurement" type="button" class="popup-content__button button-img button-img_org">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-1"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заявка на замер
+									</span>
+								</button>
+								<button data-popup="#calculation" type="button" class="popup-content__button button-img button-img_vlt">
+									<span class="popup-content__btn-img">
+										<svg class="popup-content__btn-icon">
+											<use xlink:href="img/icons/icons.svg#head-btn-2"></use>
+										</svg>
+									</span>
+									<span class="popup-content__btn-text">
+										Заказать расчет
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="popup__bottom popup-cards">
+						<ul class="popup-cards__list">
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="0 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-1"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Многоквартирные дома
+									</h4>
+									<div class="popup-cards__text">Изготовление и монтаж окон ПВХ
+										под ключ. Приглашаем к партнерству
+										застройщиков.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="0 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-2"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Офисные помещения
+									</h4>
+									<div class="popup-cards__text">Установка пластиковых окон,
+										офисных перегородок и
+										дверей и входных групп.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="5 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-3"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Социальные объекты
+									</h4>
+									<div class="popup-cards__text">Остекляем детские сады,
+										школы, медицинские учреждения.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-4"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Объекты торговли</h4>
+									<div class="popup-cards__text">Способ увеличения площади и объема балкона или лоджии.
+									</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="5 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-5"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Спортивные объекты
+									</h4>
+									<div class="popup-cards__text">Остекляем спортивные залы,
+										бассейны, крытые спорткомплексы.</div>
+								</div>
+							</li>
+							<li class="popup-cards__item">
+								<div class="popup-cards__image">
+									<svg viewBox="3 0 80 75" class="icon">
+										<use xlink:href="img/icons/icons.svg#installation-6"></use>
+									</svg>
+								</div>
+								<div class="popup-cards__content">
+									<h4 class="popup-cards__title">Производственные помещения</h4>
+									<div class="popup-cards__text">Устанавливаем окна для складских
+										и промышленных зданий в соответствии
+										с требованиями бизнеса.
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="popup-cards__bg">
+							<img src="img/services/objects/bg.webp" alt="картинка">
+						</div>
+						<div class="popup-cards__bg-gradient">
+							<img src="img/services/installation/gradient.webp" alt="картинка">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20250425212114"></script>
 </body>
-<style>
-	@charset "UTF-8";
-	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-
-	*,
-	*::before,
-	*::after {
-		padding: 0px;
-		margin: 0px;
-		border: 0px;
-		box-sizing: border-box;
-	}
-
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		min-width: 320px;
-		width: 100%;
-		color: #fff;
-		background-color: #5e5373;
-	}
-
-	body {
-		font-family: Montserrat;
-		font-size: 100%;
-		line-height: 1;
-		font-size: 1rem;
-	}
-
-	a {
-		text-decoration: underline;
-		color: #ebe691
-	}
-
-	a:visited {
-		text-decoration: underline;
-		color: #aaa768;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-
-	ul li {
-		list-style: none;
-	}
-
-	img {
-		vertical-align: top;
-	}
-
-	.wrapper {
-		width: 100%;
-		min-height: 100%;
-		overflow: hidden;
-	}
-
-	.rootpage {
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	@media (max-width: 767px) {
-		.rootpage {
-			padding: 30px 15px;
-		}
-	}
-
-	h1 {
-		color: #ebe691;
-		font-size: 2.5rem;
-		margin: 0px 0px 1.25rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h1 {
-			font-size: 1.85rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-	}
-
-	h2 {
-		color: #ebe691;
-		font-size: 1.25rem;
-		margin: 0px 0px 1rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h2 {
-			font-size: 1.125rem;
-			margin: 0px 0px 1rem 0px;
-		}
-	}
-
-	.rootpage__info {
-		line-height: 140%;
-		margin: 0px 0px 1.5rem 0px;
-	}
-
-	.rootpage__list {
-		margin: 0px 0px 2.25rem 1.25rem;
-	}
-
-	.rootpage__list li:not(:last-child) {
-		margin: 0px 0px 15px 0px;
-	}
-
-	.rootpage__contacts,
-	.rootpage__tnx {
-		border-radius: 200px;
-		padding: 20px 65px;
-		line-height: 140%;
-	}
-
-	@media (max-width: 767px) {
-
-		.rootpage__contacts,
-		.rootpage__tnx {
-			border-radius: 40px;
-			padding: 20px;
-		}
-	}
-
-	.rootpage__contacts {
-		background: #32b5a4;
-
-	}
-
-	.rootpage__contacts a {
-		color: #ebe691;
-	}
-
-	.rootpage__tnx {
-		background: #c22d63;
-		margin: 0px 0px 1rem 0px;
-	}
-</style>
 
 </html>

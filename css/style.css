@@ -447,15 +447,6 @@ body::after {
   display: flex;
   align-items: center
 }
-[data-showmore-button] span:last-child {
-  display: none
-}
-._showmore-active [data-showmore-button] span {
-  display: none
-}
-._showmore-active [data-showmore-button] span:last-child {
-  display: block
-}
 .ibg {
   width: 100%;
   height: 100%;
@@ -1211,6 +1202,9 @@ body::after {
   position: relative;
   z-index: 0
 }
+.products__wrapper {
+  background-color: #fff
+}
 .products__slide {
   background-color: #fff
 }
@@ -1458,11 +1452,6 @@ body::after {
   text-align: justify;
   flex: 1 1 auto
 }
-.review-slide__more-btn {
-  padding: .9375rem;
-  color: #ef7f1a;
-  font-weight: 700
-}
 .certificates {
   display: flex;
   flex-direction: column;
@@ -1610,17 +1599,6 @@ body::after {
   position: relative;
   z-index: 0;
   margin: 0 -.625rem
-}
-.map__card::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: .5;
-  background-color: #fff
 }
 .map__inner {
   display: inline-flex;
@@ -1888,8 +1866,40 @@ body::after {
   display: flex;
   flex-direction: column
 }
+.popup__block {
+  position: relative
+}
 .popup__top {
   display: flex
+}
+.popup__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0
+}
+.popup__bg img {
+  position: absolute;
+  bottom: 0;
+  right: 0
+}
+.popup__bg,
+.popup__bg-gradient {
+  z-index: -1;
+  overflow: hidden
+}
+.popup__bg-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0
+}
+.popup__bg-gradient img {
+  position: absolute;
+  bottom: 0;
+  right: 0
 }
 .top-popup__slider-block {
   padding: 1.25rem 1.25rem 1.5625rem 1.25rem;
@@ -1970,20 +1980,6 @@ body::after {
 }
 .popup-cards__text {
   font-size: .8125rem
-}
-.popup-cards__bg,
-.popup-cards__bg-gradient {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  text-align: right
-}
-.popup-cards__bg-gradient {
-  overflow: hidden
-}
-.popup-cards__bg-gradient img {
-  width: 105%
 }
 .popup-content {
   position: relative
@@ -3697,9 +3693,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     grid-template-columns: repeat(3,1fr)
   }
   .how__tabs-navigation {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     gap: .625rem;
     margin-bottom: 1.875rem
   }
@@ -3770,6 +3765,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .about-us__logo {
     margin-bottom: 1.25rem
   }
+  .how__tabs-navigation {
+    grid-template-columns: repeat(2,1fr)
+  }
   .review__slide {
     padding-right: .8125rem;
     padding-left: .8125rem
@@ -3783,14 +3781,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .popup__top {
     flex-direction: column
   }
-  .popup-cards__bg,
-  .popup-cards__bg-gradient {
-    width: 100%
-  }
 }
 @media (max-width:47.99875em)and (max-width:20em) {
-  .review__slider {
+  .review__slide {
     padding-bottom: .9375rem
+  }
+  .top-popup__content {
+    padding-left: 1.25rem
   }
 }
 @media (max-width:34.375rem) {
@@ -3813,6 +3810,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     text-align: center
   }
   .quality__list {
+    grid-template-columns: 1fr
+  }
+  .how__tabs-navigation {
     grid-template-columns: 1fr
   }
   .certificates__nav-next,
@@ -4316,13 +4316,19 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 @media (max-width:47.99875em)and (min-width:76.875em) {
-  .review__slider {
+  .review__slide {
     padding-bottom: 1.875rem
+  }
+  .top-popup__content {
+    padding-left: 1.875rem
   }
 }
 @media (max-width:47.99875em)and (min-width:20em)and (max-width:76.875em) {
-  .review__slider {
+  .review__slide {
     padding-bottom: clamp(.9375rem ,.6078296703rem + 1.6483516484vw ,1.875rem)
+  }
+  .top-popup__content {
+    padding-left: clamp(1.25rem ,1.0302197802rem + 1.0989010989vw ,1.875rem)
   }
 }
 @media (min-width:47.99875em)and (min-width:48.06125em)and (max-width:75em) {

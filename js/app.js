@@ -323,113 +323,6 @@
             }
         }));
     }
-    function showMore() {
-        window.addEventListener("load", (function(e) {
-            const showMoreBlocks = document.querySelectorAll("[data-showmore]");
-            let showMoreBlocksRegular;
-            let mdQueriesArray;
-            if (showMoreBlocks.length) {
-                showMoreBlocksRegular = Array.from(showMoreBlocks).filter((function(item, index, self) {
-                    return !item.dataset.showmoreMedia;
-                }));
-                showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
-                document.addEventListener("click", showMoreActions);
-                window.addEventListener("resize", showMoreActions);
-                mdQueriesArray = dataMediaQueries(showMoreBlocks, "showmoreMedia");
-                if (mdQueriesArray && mdQueriesArray.length) {
-                    mdQueriesArray.forEach((mdQueriesItem => {
-                        mdQueriesItem.matchMedia.addEventListener("change", (function() {
-                            initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
-                        }));
-                    }));
-                    initItemsMedia(mdQueriesArray);
-                }
-            }
-            function initItemsMedia(mdQueriesArray) {
-                mdQueriesArray.forEach((mdQueriesItem => {
-                    initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
-                }));
-            }
-            function initItems(showMoreBlocks, matchMedia) {
-                showMoreBlocks.forEach((showMoreBlock => {
-                    initItem(showMoreBlock, matchMedia);
-                }));
-            }
-            function initItem(showMoreBlock, matchMedia = false) {
-                showMoreBlock = matchMedia ? showMoreBlock.item : showMoreBlock;
-                let showMoreContent = showMoreBlock.querySelectorAll("[data-showmore-content]");
-                let showMoreButton = showMoreBlock.querySelectorAll("[data-showmore-button]");
-                showMoreContent = Array.from(showMoreContent).filter((item => item.closest("[data-showmore]") === showMoreBlock))[0];
-                showMoreButton = Array.from(showMoreButton).filter((item => item.closest("[data-showmore]") === showMoreBlock))[0];
-                const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
-                if (matchMedia.matches || !matchMedia) if (hiddenHeight < getOriginalHeight(showMoreContent)) {
-                    _slideUp(showMoreContent, 0, showMoreBlock.classList.contains("_showmore-active") ? getOriginalHeight(showMoreContent) : hiddenHeight);
-                    showMoreButton.hidden = false;
-                } else {
-                    _slideDown(showMoreContent, 0, hiddenHeight);
-                    showMoreButton.hidden = true;
-                } else {
-                    _slideDown(showMoreContent, 0, hiddenHeight);
-                    showMoreButton.hidden = true;
-                }
-            }
-            function getHeight(showMoreBlock, showMoreContent) {
-                let hiddenHeight = 0;
-                const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : "size";
-                const rowGap = parseFloat(getComputedStyle(showMoreContent).rowGap) ? parseFloat(getComputedStyle(showMoreContent).rowGap) : 0;
-                if (showMoreType === "items") {
-                    const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 3;
-                    const showMoreItems = showMoreContent.children;
-                    for (let index = 1; index < showMoreItems.length; index++) {
-                        const showMoreItem = showMoreItems[index - 1];
-                        const marginTop = parseFloat(getComputedStyle(showMoreItem).marginTop) ? parseFloat(getComputedStyle(showMoreItem).marginTop) : 0;
-                        const marginBottom = parseFloat(getComputedStyle(showMoreItem).marginBottom) ? parseFloat(getComputedStyle(showMoreItem).marginBottom) : 0;
-                        hiddenHeight += showMoreItem.offsetHeight + marginTop;
-                        if (index == showMoreTypeValue) break;
-                        hiddenHeight += marginBottom;
-                    }
-                    rowGap ? hiddenHeight += (showMoreTypeValue - 1) * rowGap : null;
-                } else {
-                    const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 150;
-                    hiddenHeight = showMoreTypeValue;
-                }
-                return hiddenHeight;
-            }
-            function getOriginalHeight(showMoreContent) {
-                let parentHidden;
-                let hiddenHeight = showMoreContent.offsetHeight;
-                showMoreContent.style.removeProperty("height");
-                if (showMoreContent.closest(`[hidden]`)) {
-                    parentHidden = showMoreContent.closest(`[hidden]`);
-                    parentHidden.hidden = false;
-                }
-                let originalHeight = showMoreContent.offsetHeight;
-                parentHidden ? parentHidden.hidden = true : null;
-                showMoreContent.style.height = `${hiddenHeight}px`;
-                return originalHeight;
-            }
-            function showMoreActions(e) {
-                const targetEvent = e.target;
-                const targetType = e.type;
-                if (targetType === "click") {
-                    if (targetEvent.closest("[data-showmore-button]")) {
-                        const showMoreButton = targetEvent.closest("[data-showmore-button]");
-                        const showMoreBlock = showMoreButton.closest("[data-showmore]");
-                        const showMoreContent = showMoreBlock.querySelector("[data-showmore-content]");
-                        const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : "500";
-                        const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
-                        if (!showMoreContent.classList.contains("_slide")) {
-                            showMoreBlock.classList.contains("_showmore-active") ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight) : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
-                            showMoreBlock.classList.toggle("_showmore-active");
-                        }
-                    }
-                } else if (targetType === "resize") {
-                    showMoreBlocksRegular && showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
-                    mdQueriesArray && mdQueriesArray.length ? initItemsMedia(mdQueriesArray) : null;
-                }
-            }
-        }));
-    }
     function functions_FLS(message) {
         setTimeout((() => {
             if (window.FLS) console.log(message);
@@ -4751,6 +4644,7 @@
                 modules: [ EffectFade, Pagination ],
                 slidesPerView: 1,
                 spaceBetween: 0,
+                autoHeight: true,
                 speed: 800,
                 lazy: true,
                 pagination: {
@@ -4763,8 +4657,7 @@
                 breakpoints: {
                     0: {
                         slidesPerView: 1,
-                        spaceBetween: 15,
-                        autoHeight: true
+                        spaceBetween: 15
                     },
                     768: {
                         slidesPerView: 1,
@@ -4787,6 +4680,17 @@
             navigation: {
                 prevEl: ".review__nav-prev",
                 nextEl: ".review__nav-next"
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                }
             },
             on: {}
         });
@@ -6931,7 +6835,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 iconLayout: "default#image",
                 iconImageHref: "img/map-logo.svg",
                 iconImageSize: [ 43, 55 ],
-                iconImageOffset: [ -15, -38 ]
+                iconImageOffset: [ -15, -38 ],
+                balloonPanelMaxMapArea: 0
             });
             var placemark1 = new ymaps.Placemark([ 56.976665, 40.980973 ], {
                 balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p1" type="button" class="map__btn">' + '<img src="img/portfolio/01.jpg" alt="image">' + "</button>" + '<button data-popup="#p1" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
@@ -6940,7 +6845,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 iconLayout: "default#image",
                 iconImageHref: "img/portfolio/location.svg",
                 iconImageSize: [ 30, 42 ],
-                iconImageOffset: [ -15, -38 ]
+                iconImageOffset: [ -15, -38 ],
+                balloonPanelMaxMapArea: 0
             });
             var placemark2 = new ymaps.Placemark([ 56.970937, 41.050112 ], {
                 balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p2" type="button" class="map__btn">' + '<img src="img/portfolio/02.jpg" alt="image">' + "</button>" + '<button data-popup="#p2" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
@@ -6949,7 +6855,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 iconLayout: "default#image",
                 iconImageHref: "img/portfolio/location.svg",
                 iconImageSize: [ 30, 42 ],
-                iconImageOffset: [ -15, -38 ]
+                iconImageOffset: [ -15, -38 ],
+                balloonPanelMaxMapArea: 0
             });
             var placemark3 = new ymaps.Placemark([ 56.992328, 41.031844 ], {
                 balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p3" type="button" class="map__btn">' + '<img src="img/portfolio/03.jpg" alt="image">' + "</button>" + '<button data-popup="#p3" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
@@ -6958,16 +6865,17 @@ PERFORMANCE OF THIS SOFTWARE.
                 iconLayout: "default#image",
                 iconImageHref: "img/portfolio/location.svg",
                 iconImageSize: [ 30, 42 ],
-                iconImageOffset: [ -15, -38 ]
+                iconImageOffset: [ -15, -38 ],
+                balloonPanelMaxMapArea: 0
             });
             var placemark4 = new ymaps.Placemark([ 56.956034, 40.962592 ], {
-                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p4" type="button" class="map__btn">' + '<img src="img/portfolio/04.jpg" alt="image">' + "</button>" + '<button data-popup="#p4" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
-                hintContent: "<p>Окна Хаус</p></br><p>Пример №4</p>"
+                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p4" type="button" class="map__btn">' + '<img src="img/portfolio/04.jpg" alt="image">' + "</button>" + '<button data-popup="#p4" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>"
             }, {
                 iconLayout: "default#image",
                 iconImageHref: "img/portfolio/location.svg",
                 iconImageSize: [ 30, 42 ],
-                iconImageOffset: [ -15, -38 ]
+                iconImageOffset: [ -15, -38 ],
+                balloonPanelMaxMapArea: 0
             });
             var placemark5 = new ymaps.Placemark([ 56.990229, 40.941817 ], {
                 balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p5" type="button" class="map__btn">' + '<img src="img/portfolio/05.jpg" alt="image">' + "</button>" + '<button data-popup="#p5" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
@@ -6976,7 +6884,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 iconLayout: "default#image",
                 iconImageHref: "img/portfolio/location.svg",
                 iconImageSize: [ 30, 42 ],
-                iconImageOffset: [ -15, -38 ]
+                iconImageOffset: [ -15, -38 ],
+                balloonPanelMaxMapArea: 0
             });
             var placemark6 = new ymaps.Placemark([ 56.99394, 41.15326 ], {
                 balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p6" type="button" class="map__btn">' + '<img src="img/portfolio/06.jpg" alt="image">' + "</button>" + '<button data-popup="#p6" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
@@ -6985,7 +6894,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 iconLayout: "default#image",
                 iconImageHref: "img/portfolio/location.svg",
                 iconImageSize: [ 30, 42 ],
-                iconImageOffset: [ -15, -38 ]
+                iconImageOffset: [ -15, -38 ],
+                balloonPanelMaxMapArea: 0
             });
             var placemark7 = new ymaps.Placemark([ 56.969726, 41.123353 ], {
                 balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p7" type="button" class="map__btn">' + '<img src="img/portfolio/07.jpg" alt="image">' + "</button>" + '<button data-popup="#p7" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
@@ -6994,7 +6904,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 iconLayout: "default#image",
                 iconImageHref: "img/portfolio/location.svg",
                 iconImageSize: [ 30, 42 ],
-                iconImageOffset: [ -15, -38 ]
+                iconImageOffset: [ -15, -38 ],
+                balloonPanelMaxMapArea: 0
             });
             var popupmark1 = new ymaps.Placemark([ 56.976665, 40.980973 ], {
                 hintContent: "<p>Окна Хаус</p></br><p>Пример №1</p>"
@@ -7097,10 +7008,10 @@ PERFORMANCE OF THIS SOFTWARE.
     const scrollLinks = document.querySelectorAll(".menu__item-link");
     for (let i = 0; i < scrollLinks.length; i++) scrollLinks[i].addEventListener("click", (function(e) {
         e.preventDefault();
-        blocks[i].scrollIntoView({
+        if (!document.documentElement.classList.contains("menu-open")) blocks[i].scrollIntoView({
             behavior: "smooth"
-        });
-        if (document.documentElement.classList.contains("menu-open")) document.documentElement.classList.remove("menu-open");
+        }); else blocks[i].scrollIntoView();
+        if (document.documentElement.classList.contains("menu-open", "lock")) document.documentElement.classList.remove("menu-open", "lock");
     }));
     const superBtn = document.querySelector(".page__scroll-btn");
     window.addEventListener("scroll", (function() {
@@ -7117,7 +7028,6 @@ PERFORMANCE OF THIS SOFTWARE.
     menuInit();
     spollers();
     tabs();
-    showMore();
     formFieldsInit({
         viewPass: false,
         autoHeight: false

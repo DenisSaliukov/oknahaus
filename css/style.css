@@ -1574,6 +1574,10 @@ body::after {
   display: flex;
   align-items: center
 }
+.balloon-open .portfolio__nav-next,
+.balloon-open .portfolio__nav-prev {
+  pointer-events: none
+}
 .portfolio__nav-next svg,
 .portfolio__nav-prev svg {
   cursor: pointer;
@@ -1656,6 +1660,9 @@ body::after {
   position: relative;
   padding-bottom: 100%;
   transition: box-shadow .3s ease 0s
+}
+.balloon-open .portfolio-slide__image {
+  pointer-events: none
 }
 .portfolio-slide__image img {
   transition: all .3s ease 0s;
@@ -1867,7 +1874,8 @@ body::after {
   flex-direction: column
 }
 .popup__block {
-  position: relative
+  position: relative;
+  overflow: hidden
 }
 .popup__top {
   display: flex
@@ -1899,7 +1907,8 @@ body::after {
 .popup__bg-gradient img {
   position: absolute;
   bottom: 0;
-  right: 0
+  right: -.0625rem;
+  height: 29.375rem
 }
 .top-popup__slider-block {
   padding: 1.25rem 1.25rem 1.5625rem 1.25rem;
@@ -2053,6 +2062,9 @@ body::after {
 }
 .request-popup__banner {
   max-width: 37.1875rem
+}
+.main-sprite {
+  background-color: #333
 }
 .swiper {
   overflow: hidden

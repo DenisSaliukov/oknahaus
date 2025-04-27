@@ -6757,7 +6757,7 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     const videoContainer = document.querySelector(".about-us__video");
     const video = document.querySelector("#video");
-    videoContainer.addEventListener("click", (function() {
+    if (videoContainer) videoContainer.addEventListener("click", (function() {
         if (!videoContainer.classList.contains("video-playing")) {
             video.play();
             videoContainer.classList.add("video-playing");
@@ -6827,7 +6827,7 @@ PERFORMANCE OF THIS SOFTWARE.
             });
             var myPlacemark = new ymaps.Placemark([ 56.973832, 41.003799 ], {
                 balloonContentHeader: '<span class="description">“Окна Хаус”</span>',
-                balloonContentBody: '<div class="map__logo" height="150" width="200"><img src="img/quality/logo-big.png"></div>' + '<a href="tel:84932343140" class="map__link"><b>8 (4932) 34 - 31 - 40</b></a><br/>' + '<a href="tel:89051093140" class="map__link"><b>8 (905) 109 - 31 - 40</b></a><br/>' + "г. Иваново, ул. Генерала Хлебникова, д.54, оф.303 <br/>okna@haus.ru",
+                balloonContentBody: '<div class="map__logo" height="150" width="200"><img src="img/quality/logo-big.webp"></div>' + '<a href="tel:84932343140" class="map__link"><b>8 (4932) 34 - 31 - 40</b></a><br/>' + '<a href="tel:89051093140" class="map__link"><b>8 (905) 109 - 31 - 40</b></a><br/>' + "г. Иваново, ул. Генерала Хлебникова, д.54, оф.303 <br/>okna@haus.ru",
                 balloonContentFooter: "ООО “Окна Хаус”",
                 balloonPanelMaxMapArea: 0,
                 hintContent: "Окна Хаус"
@@ -6839,7 +6839,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 balloonPanelMaxMapArea: 0
             });
             var placemark1 = new ymaps.Placemark([ 56.976665, 40.980973 ], {
-                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p1" type="button" class="map__btn">' + '<img src="img/portfolio/01.jpg" alt="image">' + "</button>" + '<button data-popup="#p1" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
+                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p1" type="button" class="map__btn">' + '<img src="img/portfolio/01.webp" alt="image">' + "</button>" + '<button data-popup="#p1" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
                 hintContent: "<p>Окна Хаус</p></br><p>Пример №1</p>"
             }, {
                 iconLayout: "default#image",
@@ -6849,7 +6849,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 balloonPanelMaxMapArea: 0
             });
             var placemark2 = new ymaps.Placemark([ 56.970937, 41.050112 ], {
-                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p2" type="button" class="map__btn">' + '<img src="img/portfolio/02.jpg" alt="image">' + "</button>" + '<button data-popup="#p2" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
+                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p2" type="button" class="map__btn">' + '<img src="img/portfolio/02.webp" alt="image">' + "</button>" + '<button data-popup="#p2" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
                 hintContent: "<p>Окна Хаус</p></br><p>Пример №2</p>"
             }, {
                 iconLayout: "default#image",
@@ -6859,7 +6859,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 balloonPanelMaxMapArea: 0
             });
             var placemark3 = new ymaps.Placemark([ 56.992328, 41.031844 ], {
-                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p3" type="button" class="map__btn">' + '<img src="img/portfolio/03.jpg" alt="image">' + "</button>" + '<button data-popup="#p3" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
+                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p3" type="button" class="map__btn">' + '<img src="img/portfolio/03.webp" alt="image">' + "</button>" + '<button data-popup="#p3" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
                 hintContent: "<p>Окна Хаус</p></br><p>Пример №3</p>"
             }, {
                 iconLayout: "default#image",
@@ -6869,7 +6869,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 balloonPanelMaxMapArea: 0
             });
             var placemark4 = new ymaps.Placemark([ 56.956034, 40.962592 ], {
-                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p4" type="button" class="map__btn">' + '<img src="img/portfolio/04.jpg" alt="image">' + "</button>" + '<button data-popup="#p4" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>"
+                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p4" type="button" class="map__btn">' + '<img src="img/portfolio/04.webp" alt="image">' + "</button>" + '<button data-popup="#p4" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>"
             }, {
                 iconLayout: "default#image",
                 iconImageHref: "img/portfolio/location.svg",
@@ -6878,7 +6878,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 balloonPanelMaxMapArea: 0
             });
             var placemark5 = new ymaps.Placemark([ 56.990229, 40.941817 ], {
-                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p5" type="button" class="map__btn">' + '<img src="img/portfolio/05.jpg" alt="image">' + "</button>" + '<button data-popup="#p5" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
+                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p5" type="button" class="map__btn">' + '<img src="img/portfolio/05.webp" alt="image">' + "</button>" + '<button data-popup="#p5" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
                 hintContent: "<p>Окна Хаус</p></br><p>Пример №5</p>"
             }, {
                 iconLayout: "default#image",
@@ -6888,7 +6888,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 balloonPanelMaxMapArea: 0
             });
             var placemark6 = new ymaps.Placemark([ 56.99394, 41.15326 ], {
-                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p6" type="button" class="map__btn">' + '<img src="img/portfolio/06.jpg" alt="image">' + "</button>" + '<button data-popup="#p6" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
+                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p6" type="button" class="map__btn">' + '<img src="img/portfolio/06.webp" alt="image">' + "</button>" + '<button data-popup="#p6" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
                 hintContent: "<p>Окна Хаус</p></br><p>Пример №6</p>"
             }, {
                 iconLayout: "default#image",
@@ -6898,7 +6898,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 balloonPanelMaxMapArea: 0
             });
             var placemark7 = new ymaps.Placemark([ 56.969726, 41.123353 ], {
-                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p7" type="button" class="map__btn">' + '<img src="img/portfolio/07.jpg" alt="image">' + "</button>" + '<button data-popup="#p7" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
+                balloonContentBody: '<div class="map__card">' + '<div class="map__inner">' + '<h3 class="map__title">"Окна Хаус"</h3>' + '<button data-popup="#p7" type="button" class="map__btn">' + '<img src="img/portfolio/07.webp" alt="image">' + "</button>" + '<button data-popup="#p7" type="button" class="map__text-btn">Подробнее</button>' + "</div></div>",
                 hintContent: "<p>Окна Хаус</p></br><p>Пример №7</p>"
             }, {
                 iconLayout: "default#image",
@@ -6963,10 +6963,14 @@ PERFORMANCE OF THIS SOFTWARE.
                 iconImageSize: [ 30, 42 ],
                 iconImageOffset: [ -15, -38 ]
             });
+            function removeEnabled() {
+                document.documentElement.classList.remove("balloon-open");
+            }
             function observeEvents(map) {
                 var mapEventsGroup;
                 map.geoObjects.each((function(geoObject) {
                     geoObject.balloon.events.add("open", (function(e1) {
+                        document.documentElement.classList.add("balloon-open");
                         var placemark = e1.get("target");
                         mapEventsGroup = map.events.group().add("actiontick", (function(e2) {
                             if (placemark.options.get("balloonPane") == "outerBalloon") setBalloonPane(map, placemark, e2.get("tick"));
@@ -6975,6 +6979,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         }));
                         setBalloonPane(map, placemark);
                     })).add("close", (function() {
+                        setTimeout(removeEnabled, 500);
                         mapEventsGroup.removeAll();
                     }));
                 }));
@@ -7017,7 +7022,7 @@ PERFORMANCE OF THIS SOFTWARE.
     window.addEventListener("scroll", (function() {
         if (pageYOffset > document.documentElement.clientHeight) superBtn.classList.add("_active"); else superBtn.classList.remove("_active");
     }));
-    superBtn.addEventListener("click", (function() {
+    if (superBtn) superBtn.addEventListener("click", (function() {
         window.scrollTo({
             top: 0,
             left: 0,
